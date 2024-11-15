@@ -23,7 +23,7 @@ generic_url = st.text_input("URL", label_visibility="collapsed")
 ## Gemma Model Using Groq API
 llm = ChatGroq(model="Gemma-7b-It", groq_api_key=groq_api_key)
 
-# Updated prompt for in-depth exploration and summary
+
 prompt_template = """
 Perform an in-depth exploration of the content from the following source, covering the main topics, unique features, and key insights:
 - Start with an overview of the primary themes.
