@@ -17,5 +17,5 @@ jobs:
           lfs: true
       - name: Push to hub
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_TOKEN: ${{ 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}}
         run: git push https://RaghuCourage9605:$HF_TOKEN@huggingface.co/spaces/RaghuCourage9605/EY_Techathon_Prototype_ main
