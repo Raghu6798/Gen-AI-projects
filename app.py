@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from IPython.display import Markdown, display
 
-## Streamlit App
+
 groq_api_key = st.secrets["GROQ_API"]
 st.set_page_config(page_title="LangChain: In-depth Summary from YT or Website", page_icon="🦜")
 st.title("🦜 LangChain: In-depth Summary from YT or Website")
