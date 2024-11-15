@@ -1,10 +1,10 @@
+name: Sync to Hugging Face Hub
 
-name: Sync to Hugging Face hub
 on:
   push:
     branches: [main]
 
-  # to run this workflow manually from the Actions tab
+  # To run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,11 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
-      - name: Push to hub
+          
+      - name: Push to Hub
         env:
-          HF_TOKEN: ${{ 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}}
-        run: git push https://RaghuCourage9605:$HF_TOKEN@huggingface.co/spaces/RaghuCourage9605/EY_Techathon_Prototype_ main
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}  # Use GitHub Secrets for security
+        run: |
+          git config --global user.email "your-email@example.com"  # Replace with your email
+          git config --global user.name "Your GitHub Username"     # Replace with your username
+          git push https://RaghuCourage9605:${HF_TOKEN}@huggingface.co/spaces/RaghuCourage9605/EY_Techathon_Prototype main
